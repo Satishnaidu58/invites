@@ -2,7 +2,6 @@
 
 import { CalendarDays, ChevronLeft, ChevronRight, Clock, Heart, MapPin, Navigation } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
-import { EventAssistant } from '@/components/event-assistant';
 
 const stories = [
   { year: '2021', kicker: 'The first hello', title: 'Where our story began', copy: 'We met in college — two lives crossing at exactly the right time.', tone: 'rose' },
@@ -94,11 +93,6 @@ export default function Home() {
             </div>
           </article>
         </div>
-      </section>
-
-      <section className="assistant-section" id="assistant" aria-labelledby="assistant-title">
-        <div className="section-heading shell"><p className="eyebrow">Helpful, private &amp; on-device</p><h2 id="assistant-title">Have a question?</h2></div>
-        <EventAssistant />
       </section>
 
       <footer><Heart size={18} fill="currentColor" aria-hidden="true" /><p>With love,</p><h2>Samiksha &amp; Chinmay</h2><small>We can’t wait to celebrate with you</small></footer>
