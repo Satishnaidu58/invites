@@ -1,7 +1,9 @@
 'use client';
 
 import { CalendarDays, ChevronLeft, ChevronRight, Clock, Heart, MapPin, Navigation } from 'lucide-react';
+import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
+import coupleArt from '@/public/south-indian-couple-namaste.webp';
 
 const stories = [
   { year: '2021', kicker: 'The first hello', title: 'Where our story began', copy: 'We met in college — two lives crossing at exactly the right time.', tone: 'rose' },
@@ -35,8 +37,14 @@ export default function Home() {
           <div className="date-pill"><span>Date to be announced</span><i /><span>Save our celebration</span></div>
           <a className="primary-button" href="#story">Begin our story <ChevronRight size={18} aria-hidden="true" /></a>
         </div>
-        <figure className="hero-photo" aria-label="Placeholder for Samiksha and Chinmay's couple photograph">
-          <div className="photo-label"><Heart size={18} fill="currentColor" /> Couple photo</div>
+        <figure className="welcome-stage">
+          <span className="welcome-petal petal-one" aria-hidden="true">✦</span>
+          <span className="welcome-petal petal-two" aria-hidden="true">●</span>
+          <span className="welcome-petal petal-three" aria-hidden="true">✦</span>
+          <div className="welcome-couple-wrap">
+            <Image className="welcome-couple" src={coupleArt} alt="A South Indian couple in a saree and veshti welcoming guests with namaste" priority sizes="(max-width: 720px) 82vw, 38vw" unoptimized />
+          </div>
+          <figcaption><strong>Vanakkam!</strong><span>Welcome to our celebration</span></figcaption>
         </figure>
         <span className="scroll-note">Scroll to celebrate <span>↓</span></span>
       </section>
