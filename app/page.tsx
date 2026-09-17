@@ -87,9 +87,9 @@ export default function Home() {
             </div>
           </article>
           <article className="venue-card">
-            <div className="venue-art"><MapPin size={46} aria-hidden="true" /><span>Venue</span></div>
-            <div className="venue-copy"><p className="role">Where to find us</p><h3>Venue to be announced</h3><p>The full address and a verified directions link will be added as soon as the venue is confirmed.</p>
-              <a className="map-button" href="https://www.google.com/maps/search/?api=1&query=Engagement+venue" target="_blank" rel="noreferrer"><Navigation size={17} aria-hidden="true" /> Open Maps</a>
+            <div className="venue-art"><MapPin size={46} aria-hidden="true" /><span>Patia · Bhubaneswar</span></div>
+            <div className="venue-copy"><p className="role">Where to find us</p><h3>PARK Selections</h3><p>Plot No. 100, KIIT Road, near Falcon Marine Exports, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024.</p>
+              <a className="map-button" href="https://share.google/kzAdMG09a8dN4oC0C" target="_blank" rel="noreferrer"><Navigation size={17} aria-hidden="true" /> Open in Google Maps</a>
             </div>
           </article>
         </div>

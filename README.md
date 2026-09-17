@@ -54,7 +54,6 @@ All story copy is provisional and should be reviewed by the couple before publis
 - Event schedule with function names and timings.
 - Venue card with address and a button that opens the location in Google Maps or the device's preferred maps app.
 - Optional countdown to the engagement.
-- In-browser local AI assistant for common guest questions.
 - Accessible typography, controls, motion preferences, and colour contrast.
 
 ## Story Slider Behaviour
@@ -83,9 +82,9 @@ Replace the following placeholders after the arrangements are confirmed:
 | Guest arrival | To be announced |
 | Ceremony | To be announced |
 | Celebration / dinner | To be announced |
-| Venue | Venue name to be announced |
-| Address | Full address to be added |
-| Maps link | Google Maps URL to be added |
+| Venue | PARK Selections |
+| Address | Plot No. 100, KIIT Road, near Falcon Marine Exports, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024 |
+| Maps link | https://share.google/kzAdMG09a8dN4oC0C |
 
 The location button should open an external maps URL in a new tab. On mobile, the link may open the guest's installed maps application.
 
@@ -101,28 +100,6 @@ Example:
 </a>
 ```
 
-## In-Browser Local LLM
-
-The site can include an optional **Ask About the Event** assistant that runs locally in a supported browser. It can answer questions such as:
-
-- Where is the venue?
-- What time should I arrive?
-- What functions are planned?
-- How do I open the location in Maps?
-- How did Samiksha and Chinmay meet?
-
-Suggested implementation:
-
-- Use a browser-compatible local inference library such as **WebLLM** with a small, quantized model.
-- Restrict answers to a curated event-information object included with the website.
-- Display model download size and progress before loading it.
-- Load the model only after the guest chooses to start the assistant; do not delay the invitation page.
-- Keep event data and chats on the guest's device.
-- Provide ordinary event details and FAQ content outside the assistant so the page remains useful on unsupported or low-memory devices.
-- Prevent invented answers by instructing the assistant to say that unconfirmed information is not yet available.
-
-The assistant should be an enhancement, not a requirement. Browser-based models may have a large initial download and work best where WebGPU is available.
-
 ## Responsive Design Direction
 
 ### Mobile
@@ -130,7 +107,7 @@ The assistant should be an enhancement, not a requirement. Browser-based models 
 - Optimise first for widths from **320 px to 480 px**.
 - Use a single-column layout and thumb-friendly controls.
 - Make the story slider prominent near the top of the page.
-- Keep key actions—event details, directions, and AI assistant—easy to reach.
+- Keep key actions—event details and directions—easy to reach.
 - Use compressed responsive images and avoid loading all full-resolution story photos immediately.
 
 ### Desktop
@@ -184,9 +161,6 @@ Celebration Details
 ├── Venue and address
 └── Open in Maps
 
-Ask About the Event
-└── Optional local browser assistant
-
 Footer
 └── Closing note from the couple and families
 ```
@@ -208,7 +182,7 @@ Footer
 
 - [ ] Engagement date and year
 - [ ] Complete function schedule and timings
-- [ ] Venue name, complete address, and verified Maps link
+- [x] Venue name, complete address, and verified Maps link
 - [ ] Final bride, groom, couple, and story photographs
 - [ ] Approved introductions for Samiksha and Chinmay
 - [ ] Groom's parents' names, if they should be displayed
