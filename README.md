@@ -1,6 +1,6 @@
 # Samiksha & Chinmay — Engagement Invitation
 
-A warm, mobile-first digital engagement invitation for **Samiksha Naidu** and **Chinmay Nayek**. The experience introduces the couple, shares their story through an automatically advancing story slider, and gives guests quick access to the event schedule and venue.
+A warm, mobile-first digital engagement invitation for **Samiksha Naidu** and **Chinmay Nayak**. The experience introduces the couple, shares their story through an automatically advancing story slider, and gives guests quick access to the event schedule and venue.
 
 > This README is the initial product and implementation brief. Dates, times, venue details, final copy, and photographs are placeholders until confirmed.
 
@@ -14,7 +14,7 @@ Add a short, personal introduction here—for example, her interests, personalit
 
 **Photo:** Use a portrait placeholder until the final bride photograph is available.
 
-### Chinmay Nayek — The Groom
+### Chinmay Nayak — The Groom
 
 Add a short, personal introduction here—for example, his interests, personality, profession, and what he is most looking forward to as he begins this new chapter.
 

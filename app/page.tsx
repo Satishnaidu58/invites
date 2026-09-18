@@ -60,8 +60,8 @@ export default function Home() {
           </article>
           <div className="heart-divider"><Heart size={22} fill="currentColor" aria-hidden="true" /></div>
           <article className="person-card">
-            <figure className="portrait portrait-groom" aria-label="Placeholder portrait for Chinmay Nayek"><span>CN</span><small>Photo coming soon</small></figure>
-            <p className="role">The groom</p><h3>Chinmay Nayek</h3>
+            <figure className="portrait portrait-groom" aria-label="Placeholder portrait for Chinmay Nayak"><span>CN</span><small>Photo coming soon</small></figure>
+            <p className="role">The groom</p><h3>Chinmay Nayak</h3>
             <p className="parent-line">His family introduction will be added here</p>
             <p>Thoughtful, joyful, and looking forward to building a beautiful life together.</p>
           </article>
