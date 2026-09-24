@@ -2,7 +2,7 @@
 
 A warm, mobile-first digital engagement invitation for **Samiksha Naidu** and **Chinmay Nayak**. The experience introduces the couple, shares their story through an automatically advancing story slider, and gives guests quick access to the event schedule and venue.
 
-> This README is the initial product and implementation brief. Dates, times, venue details, final copy, and photographs are placeholders until confirmed.
+> This README is the initial product and implementation brief. Dates, times, and final copy remain placeholders until confirmed. The supplied couple photographs are now integrated into the page.
 
 ## The Couple
 
@@ -12,13 +12,13 @@ A warm, mobile-first digital engagement invitation for **Samiksha Naidu** and **
 
 Add a short, personal introduction here—for example, her interests, personality, profession, and what she is most looking forward to as she begins this new chapter.
 
-**Photo:** Use a portrait placeholder until the final bride photograph is available.
+**Photo:** `public/samiksha-portrait.jpg`
 
 ### Chinmay Nayak — The Groom
 
 Add a short, personal introduction here—for example, his interests, personality, profession, and what he is most looking forward to as he begins this new chapter.
 
-**Photo:** Use a portrait placeholder until the final groom photograph is available.
+**Photo:** `public/chinmay-portrait.jpg`
 
 ## Their Story
 
@@ -117,25 +117,21 @@ Example:
 - Give the slider a phone-like or cinematic frame without stretching portrait images.
 - Retain visible previous/next controls and keyboard support.
 
-## Placeholder Assets
+## Image Assets
 
-Use temporary royalty-free or generated placeholders with consistent dimensions until final assets are supplied.
+The supplied portraits have been resized and compressed for responsive web delivery.
 
 ```text
 public/
-└── images/
-    ├── couple-hero-placeholder.webp
-    ├── bride-placeholder.webp
-    ├── groom-placeholder.webp
-    ├── story-01-placeholder.webp
-    ├── story-02-placeholder.webp
-    ├── story-03-placeholder.webp
-    └── story-04-placeholder.webp
+├── samiksha-chinmay-couple.jpg
+├── samiksha-candid.jpg
+├── samiksha-portrait.jpg
+├── chinmay-seated.jpg
+└── chinmay-portrait.jpg
 ```
 
 Recommended image treatment:
 
-- Hero image: landscape, approximately `1600 × 1000`.
 - Profile images: portrait, approximately `800 × 1000`.
 - Story images: portrait, approximately `1080 × 1920`.
 - Prefer WebP or AVIF, with meaningful alternative text.

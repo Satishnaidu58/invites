@@ -27,27 +27,6 @@ button { font: inherit; }
 .date-pill i { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
 .primary-button { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 14px 20px; border-radius: 999px; background: var(--wine); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .05em; box-shadow: 0 12px 30px rgb(112 31 54 / 20%); transition: transform .2s, box-shadow .2s; }
 .primary-button:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgb(112 31 54 / 28%); }
-.welcome-stage { position: absolute; z-index: 2; right: clamp(20px, 5vw, 80px); bottom: 24px; width: min(38vw, 480px); margin: 0; text-align: center; }
-.welcome-stage::before { content: ''; position: absolute; z-index: -1; inset: 15% -8% 8%; border-radius: 50%; background: radial-gradient(circle, rgb(199 155 82 / 30%), rgb(112 31 54 / 11%) 48%, transparent 72%); filter: blur(8px); }
-.welcome-couple-wrap { transform-origin: 50% 92%; animation: welcome-dance 4.2s ease-in-out infinite; will-change: transform; }
-.welcome-couple { display: block; width: 100%; height: auto; filter: drop-shadow(0 22px 20px rgb(61 16 32 / 23%)); }
-.welcome-stage figcaption { position: absolute; left: 50%; bottom: 14px; display: grid; gap: 2px; width: max-content; transform: translateX(-50%); padding: 10px 18px; border: 1px solid rgb(255 255 255 / 42%); border-radius: 999px; background: rgb(255 250 240 / 84%); color: var(--wine); box-shadow: 0 12px 30px rgb(61 16 32 / 16%); backdrop-filter: blur(12px); }
-.welcome-stage figcaption strong { font: italic 600 20px var(--font-display), Georgia, serif; }
-.welcome-stage figcaption span { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
-.welcome-petal { position: absolute; z-index: 3; color: var(--gold); animation: petal-float 4.8s ease-in-out infinite; }
-.petal-one { top: 29%; left: 3%; font-size: 17px; }
-.petal-two { top: 15%; right: 4%; color: #a65e6b; font-size: 7px; animation-delay: -1.4s; }
-.petal-three { top: 47%; right: -1%; font-size: 12px; animation-delay: -2.6s; }
-@keyframes welcome-dance {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-1.2deg); }
-  25% { transform: translate3d(-6px, -8px, 0) rotate(.7deg); }
-  50% { transform: translate3d(3px, -2px, 0) rotate(1.3deg); }
-  75% { transform: translate3d(7px, -9px, 0) rotate(-.5deg); }
-}
-@keyframes petal-float {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(0); opacity: .55; }
-  50% { transform: translate3d(7px, -18px, 0) rotate(90deg); opacity: 1; }
-}
 .scroll-note { position: absolute; z-index: 2; bottom: 30px; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; }
 .scroll-note span { color: var(--gold); margin-left: 6px; }
 .couple-section { padding-block: 110px 130px; }
@@ -57,11 +36,9 @@ button { font: inherit; }
 .flourish { display: block; margin-top: 17px; color: var(--gold); }
 .couple-grid { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: center; gap: 30px; max-width: 900px; margin: auto; }
 .person-card { text-align: center; }
-.portrait { aspect-ratio: .82; margin: 0; border-radius: 48% 48% 8px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: rgb(255 255 255 / 85%); box-shadow: 0 20px 55px rgb(79 42 45 / 13%); }
-.portrait-bride { background: linear-gradient(145deg, #d9a3a6, #8a4356); }
-.portrait-groom { background: linear-gradient(145deg, #a9a99a, #4f5950); }
-.portrait span { font: 500 70px var(--font-display), Georgia, serif; }
-.portrait small { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; }
+.portrait { position: relative; aspect-ratio: .82; margin: 0; overflow: hidden; border: 1px solid rgb(199 155 82 / 30%); border-radius: 48% 48% 8px 8px; background: var(--paper); box-shadow: 0 20px 55px rgb(79 42 45 / 13%); }
+.portrait img { object-fit: cover; object-position: center top; transition: transform .7s ease; }
+.person-card:hover .portrait img { transform: scale(1.025); }
 .person-card .role { margin: 28px 0 7px; color: var(--gold); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; }
 .person-card h3 { margin: 0; color: var(--wine); font: 500 32px var(--font-display), Georgia, serif; }
 .person-card > p:last-child, .parent-line { max-width: 350px; margin-inline: auto; color: var(--muted); font-size: 14px; line-height: 1.7; }
@@ -81,9 +58,9 @@ button { font: inherit; }
 .story-progress button::before { content: ''; display: block; height: 2px; border-radius: 3px; background: rgb(255 255 255 / 32%); }
 .story-progress span { display: block; width: 0; height: 2px; margin-top: -2px; background: #fff; border-radius: 3px; transition: width .4s; }
 .story-progress .filled { width: 100%; }
-.story-visual { position: absolute; inset: 70px 0 auto; text-align: center; color: rgb(255 255 255 / 17%); }
-.story-visual span { display: block; font: 500 110px var(--font-display), Georgia, serif; letter-spacing: -.06em; }
-.story-visual small { color: rgb(255 255 255 / 55%); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; }
+.story-visual { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+.story-visual img { object-fit: cover; object-position: center 22%; }
+.story-visual span { position: absolute; top: 55px; left: 20px; padding: 8px 12px; border: 1px solid rgb(255 255 255 / 36%); border-radius: 999px; background: rgb(46 17 27 / 45%); color: #fff; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; backdrop-filter: blur(8px); }
 .story-content { position: absolute; left: 0; right: 0; bottom: 65px; padding: 36px; color: #fff; }
 .story-content > p { margin: 0 0 8px; color: #e2bd7c; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; }
 .story-content h3 { margin: 0 0 16px; font: 500 39px/1 var(--font-display), Georgia, serif; letter-spacing: -.025em; }
@@ -122,17 +99,15 @@ footer h2 { margin: 0; font: 500 45px var(--font-display), Georgia, serif; }
 footer small { display: block; margin-top: 12px; color: rgb(255 255 255 / 53%); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; }
 @media (max-width: 720px) {
   .shell { width: min(100% - 30px, 540px); }
-  .hero { min-height: 980px; align-items: start; background: linear-gradient(180deg, #fffaf0 0 54%, #f1d8cc 54%); }
+  .hero { min-height: 100svh; align-items: center; background: linear-gradient(180deg, #fffaf0, #f1d8cc); }
   .nav { height: 76px; } .monogram { width: 45px; height: 45px; font-size: 13px; }
-  .hero-copy { padding-top: 118px; text-align: center; }
+  .hero-copy { padding: 118px 0 92px; text-align: center; }
   .hero-copy .eyebrow { max-width: 280px; margin-inline: auto; line-height: 1.7; }
   .hero-names h1 { font-size: clamp(62px, 19vw, 92px); line-height: .86; }
   .hero-names h1:last-child { margin: 0; } .hero-ampersand { margin: 1px 0 -5px; font-size: 31px; }
   .hero-subtitle { margin-top: 18px; font-size: 18px; }
   .date-pill { margin: 23px auto 0; flex-direction: column; gap: 7px; border-radius: 18px; }
   .primary-button { margin-top: 18px; }
-  .welcome-stage { right: auto; left: 50%; bottom: 12px; width: min(82vw, 370px); transform: translateX(-50%); }
-  .welcome-stage figcaption { bottom: 10px; padding: 9px 16px; }
   .scroll-note { display: none; } .couple-section { padding-block: 80px; } .section-heading { margin-bottom: 42px; }
   .couple-grid { grid-template-columns: 1fr; gap: 38px; } .portrait { max-width: 340px; margin-inline: auto; }
   .heart-divider { justify-content: center; flex-direction: row; } .heart-divider::before, .heart-divider::after { height: 1px; width: 70px; }

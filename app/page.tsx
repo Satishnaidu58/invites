@@ -3,13 +3,17 @@
 import { CalendarDays, ChevronLeft, ChevronRight, Clock, Heart, MapPin, Navigation } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
-import coupleArt from '@/public/south-indian-couple-namaste.webp';
+import chinmayPortrait from '@/public/chinmay-portrait.jpg';
+import chinmaySeated from '@/public/chinmay-seated.jpg';
+import samikshaCandid from '@/public/samiksha-candid.jpg';
+import samikshaChinmayCouple from '@/public/samiksha-chinmay-couple.jpg';
+import samikshaPortrait from '@/public/samiksha-portrait.jpg';
 
 const stories = [
-  { year: '2021', kicker: 'The first hello', title: 'Where our story began', copy: 'We met in college — two lives crossing at exactly the right time.', tone: 'rose' },
-  { year: 'Chapter II', kicker: 'Easy conversations', title: 'From classmates to friends', copy: 'Ordinary college days slowly became the memories we returned to most.', tone: 'sage' },
-  { year: 'Chapter III', kicker: 'Something beautiful', title: 'A friendship became more', copy: 'In laughter, kindness and quiet understanding, we found home in each other.', tone: 'amber' },
-  { year: 'Now', kicker: 'The next chapter', title: 'Together, always', copy: 'With full hearts and our families beside us, we are ready to celebrate.', tone: 'plum' },
+  { year: '2021', kicker: 'The first hello', title: 'Where our story began', copy: 'We met in college — two lives crossing at exactly the right time.', tone: 'rose', image: samikshaChinmayCouple, imageAlt: 'Samiksha and Chinmay together at their celebration' },
+  { year: 'Chapter II', kicker: 'Easy conversations', title: 'From classmates to friends', copy: 'Ordinary college days slowly became the memories we returned to most.', tone: 'sage', image: samikshaCandid, imageAlt: 'Samiksha smiling in a blue saree' },
+  { year: 'Chapter III', kicker: 'Something beautiful', title: 'A friendship became more', copy: 'In laughter, kindness and quiet understanding, we found home in each other.', tone: 'amber', image: chinmaySeated, imageAlt: 'Chinmay smiling in traditional attire' },
+  { year: 'Now', kicker: 'The next chapter', title: 'Together, always', copy: 'With full hearts and our families beside us, we are ready to celebrate.', tone: 'plum', image: samikshaChinmayCouple, imageAlt: 'Samiksha and Chinmay smiling together' },
 ];
 
 export default function Home() {
@@ -37,15 +41,6 @@ export default function Home() {
           <div className="date-pill"><span>Date to be announced</span><i /><span>Save our celebration</span></div>
           <a className="primary-button" href="#story">Begin our story <ChevronRight size={18} aria-hidden="true" /></a>
         </div>
-        <figure className="welcome-stage">
-          <span className="welcome-petal petal-one" aria-hidden="true">✦</span>
-          <span className="welcome-petal petal-two" aria-hidden="true">●</span>
-          <span className="welcome-petal petal-three" aria-hidden="true">✦</span>
-          <div className="welcome-couple-wrap">
-            <Image className="welcome-couple" src={coupleArt} alt="A South Indian couple in a saree and veshti welcoming guests with namaste" priority sizes="(max-width: 720px) 82vw, 38vw" unoptimized />
-          </div>
-          <figcaption><strong>Vanakkam!</strong><span>Welcome to our celebration</span></figcaption>
-        </figure>
         <span className="scroll-note">Scroll to celebrate <span>↓</span></span>
       </section>
 
@@ -53,14 +48,14 @@ export default function Home() {
         <div className="section-heading"><p className="eyebrow">Two hearts, one promise</p><h2 id="couple-title">Meet the couple</h2><span className="flourish">✦</span></div>
         <div className="couple-grid">
           <article className="person-card">
-            <figure className="portrait portrait-bride" aria-label="Placeholder portrait for Samiksha Naidu"><span>SN</span><small>Photo coming soon</small></figure>
+            <figure className="portrait portrait-bride"><Image src={samikshaPortrait} alt="Samiksha Naidu wearing a blue saree" fill sizes="(max-width: 720px) 90vw, 405px" unoptimized /></figure>
             <p className="role">The bride</p><h3>Samiksha Naidu</h3>
             <p className="parent-line">Daughter of Gopal Swami Naidu &amp; Indrani Naidu</p>
             <p>Warm-hearted, wonderfully curious, and ready for a lifetime of shared adventures.</p>
           </article>
           <div className="heart-divider"><Heart size={22} fill="currentColor" aria-hidden="true" /></div>
           <article className="person-card">
-            <figure className="portrait portrait-groom" aria-label="Placeholder portrait for Chinmay Nayak"><span>CN</span><small>Photo coming soon</small></figure>
+            <figure className="portrait portrait-groom"><Image src={chinmayPortrait} alt="Chinmay Nayak wearing traditional ivory attire" fill sizes="(max-width: 720px) 90vw, 405px" unoptimized /></figure>
             <p className="role">The groom</p><h3>Chinmay Nayak</h3>
             <p className="parent-line">His family introduction will be added here</p>
             <p>Thoughtful, joyful, and looking forward to building a beautiful life together.</p>
@@ -74,7 +69,7 @@ export default function Home() {
           <div className="story-progress" aria-label={`Story ${activeStory + 1} of ${stories.length}`}>
             {stories.map((story, index) => <button key={story.title} onClick={() => goTo(index)} aria-label={`Open story ${index + 1}`}><span className={index <= activeStory ? 'filled' : ''} /></button>)}
           </div>
-          <div className="story-visual" aria-hidden="true"><span>{stories[activeStory].year}</span><small>Story photo placeholder</small></div>
+          <div className="story-visual"><Image src={stories[activeStory].image} alt={stories[activeStory].imageAlt} fill sizes="(max-width: 460px) 100vw, 430px" unoptimized /><span>{stories[activeStory].year}</span></div>
           <div className="story-content" aria-live="polite"><p>{stories[activeStory].kicker}</p><h3>{stories[activeStory].title}</h3><blockquote>“{stories[activeStory].copy}”</blockquote></div>
           <button className="story-arrow previous" onClick={() => goTo(activeStory - 1)} aria-label="Previous story"><ChevronLeft /></button>
           <button className="story-arrow next" onClick={() => goTo(activeStory + 1)} aria-label="Next story"><ChevronRight /></button>
