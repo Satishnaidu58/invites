@@ -2,7 +2,7 @@
 
 A warm, mobile-first digital engagement invitation for **Samiksha Naidu** and **Chinmay Nayak**. The experience introduces the couple, shares their story through an automatically advancing story slider, and gives guests quick access to the event schedule and venue.
 
-> This README is the initial product and implementation brief. Dates, times, and final copy remain placeholders until confirmed. The supplied couple photographs are now integrated into the page.
+> This README is the initial product and implementation brief. The year, remaining schedule details, and final copy remain to be confirmed. The supplied couple photographs are now integrated into the page.
 
 ## The Couple
 
@@ -34,12 +34,6 @@ Suggested story sequence:
 
 3. **A Friendship Becomes More**  
    Over time, they discovered a connection that felt natural, joyful, and lasting.
-
-4. **The Next Chapter**  
-   Surrounded by their families and friends, they are ready to celebrate their engagement.
-
-5. **You Are Invited**  
-   Join Samiksha and Chinmay as they begin this beautiful new chapter together.
 
 All story copy is provisional and should be reviewed by the couple before publishing.
 
@@ -78,10 +72,10 @@ Replace the following placeholders after the arrangements are confirmed:
 | Detail | Information |
 | --- | --- |
 | Event | Engagement Ceremony |
-| Date | To be announced |
-| Guest arrival | To be announced |
-| Ceremony | To be announced |
-| Celebration / dinner | To be announced |
+| Date | 4th December — year to be confirmed |
+| Guest arrival | 11:00 AM |
+| Ceremony | Ring ceremony, followed by blessings |
+| Lunch | At the temple, following the ceremony |
 | Venue | PARK Selections |
 | Address | Plot No. 100, KIIT Road, near Falcon Marine Exports, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024 |
 | Maps link | https://share.google/kzAdMG09a8dN4oC0C |
@@ -176,8 +170,8 @@ Footer
 
 ## Information Needed Before Launch
 
-- [ ] Engagement date and year
-- [ ] Complete function schedule and timings
+- [ ] Engagement year
+- [ ] Any additional function timings
 - [x] Venue name, complete address, and verified Maps link
 - [ ] Final bride, groom, couple, and story photographs
 - [ ] Approved introductions for Samiksha and Chinmay

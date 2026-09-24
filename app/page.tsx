@@ -37,7 +37,7 @@ export default function Home() {
           <p className="eyebrow">With joyful hearts, we invite you to celebrate</p>
           <div className="hero-names"><h1>Samiksha</h1><span className="hero-ampersand">&amp;</span><h1>Chinmay</h1></div>
           <p className="hero-subtitle">are getting engaged</p>
-          <div className="date-pill"><span>Date to be announced</span><i /><span>Save our celebration</span></div>
+          <div className="date-pill"><span>4th December</span><i /><span>11:00 AM</span></div>
           <a className="primary-button" href="#story">Begin our story <ChevronRight size={18} aria-hidden="true" /></a>
         </div>
         <span className="scroll-note">Scroll to celebrate <span>↓</span></span>
@@ -74,18 +74,18 @@ export default function Home() {
           <button className="story-arrow next" onClick={() => goTo(activeStory + 1)} aria-label="Next story"><ChevronRight /></button>
           <button className="pause-control" onClick={() => setPaused((value) => !value)}>{paused ? 'Play stories' : 'Pause stories'}</button>
         </div>
-        <a className="details-preview" href="#details"><MapPin aria-hidden="true" /><span><strong>Celebration details</strong><small>Date, timings &amp; venue coming next</small></span><ChevronRight aria-hidden="true" /></a>
+        <a className="details-preview" href="#details"><MapPin aria-hidden="true" /><span><strong>Celebration details</strong><small>4th December · 11:00 AM</small></span><ChevronRight aria-hidden="true" /></a>
       </section>
 
       <section className="details-section shell" id="details" aria-labelledby="details-title">
         <div className="section-heading"><p className="eyebrow">Come celebrate with us</p><h2 id="details-title">The celebration</h2><span className="flourish">✦</span></div>
         <div className="details-grid">
           <article className="schedule-card">
-            <div className="card-heading"><CalendarDays aria-hidden="true" /><div><p className="role">Save the date</p><h3>Date to be announced</h3></div></div>
+            <div className="card-heading"><CalendarDays aria-hidden="true" /><div><p className="role">Save the date</p><h3>4th December</h3></div></div>
             <div className="timeline">
-              <div><Clock aria-hidden="true" /><span><strong>Guest welcome</strong><small>Time to be announced</small></span></div>
-              <div><Heart aria-hidden="true" /><span><strong>Ring ceremony</strong><small>Time to be announced</small></span></div>
-              <div><span className="dinner-mark">✦</span><span><strong>Dinner &amp; celebration</strong><small>Time to be announced</small></span></div>
+              <div><Clock aria-hidden="true" /><span><strong>Guest welcome</strong><small>11:00 AM</small></span></div>
+              <div><Heart aria-hidden="true" /><span><strong>Ring ceremony</strong><small>Followed by blessings</small></span></div>
+              <div><span className="dinner-mark">✦</span><span><strong>Lunch at the temple</strong><small>Following the ceremony</small></span></div>
             </div>
           </article>
           <article className="venue-card">
