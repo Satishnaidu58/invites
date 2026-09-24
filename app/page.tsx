@@ -13,7 +13,6 @@ const stories = [
   { year: '2021', kicker: 'The first hello', title: 'Where our story began', copy: 'We met in college — two lives crossing at exactly the right time.', tone: 'rose', image: samikshaChinmayCouple, imageAlt: 'Samiksha and Chinmay together at their celebration' },
   { year: 'Chapter II', kicker: 'Easy conversations', title: 'From classmates to friends', copy: 'Ordinary college days slowly became the memories we returned to most.', tone: 'sage', image: samikshaCandid, imageAlt: 'Samiksha smiling in a blue saree' },
   { year: 'Chapter III', kicker: 'Something beautiful', title: 'A friendship became more', copy: 'In laughter, kindness and quiet understanding, we found home in each other.', tone: 'amber', image: chinmaySeated, imageAlt: 'Chinmay smiling in traditional attire' },
-  { year: 'Now', kicker: 'The next chapter', title: 'Together, always', copy: 'With full hearts and our families beside us, we are ready to celebrate.', tone: 'plum', image: samikshaChinmayCouple, imageAlt: 'Samiksha and Chinmay smiling together' },
 ];
 
 export default function Home() {
