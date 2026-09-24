@@ -36,6 +36,13 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build static site
         run: pnpm build
+      - name: Normalize GitHub Pages asset paths
+        run: |
+          repo_name="${GITHUB_REPOSITORY#*/}"
+          if [ -d "dist/client/${repo_name}/_next" ]; then
+            mv "dist/client/${repo_name}/_next" dist/client/_next
+            rmdir "dist/client/${repo_name}"
+          fi
       - name: Mark output for GitHub Pages
         run: touch dist/client/.nojekyll
       - name: Configure Pages
